@@ -44,10 +44,6 @@ Route::get('/psa-id-checker', function () {
     return view('registration.psa-id-checker');
 })->name('psaID-checker');
 
-Route::get('/organizing-committee', function () {
-    return view('home/pages/organizing-committee');
-})->name('orgCom');
-
 
 
 
