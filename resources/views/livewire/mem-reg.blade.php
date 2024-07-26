@@ -171,14 +171,14 @@
         <div class="row mt-5">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label style=" font-weight: 750; font-size: medium;">Enter Last Name:</label>
+                    <label style=" font-weight: 750; font-size: medium; color:white;">Enter Last Name:</label>
                     <input style="box-shadow: 2px 2px 3px gray; background-color: white; color: black; font-weight: bold;" class="form-control form-control-subject" placeholder="" wire:model.live='name'>
                 </div>
                 <button type="button" class="btn btn-primary solid blank mb-3" wire:click="checker" style="background: #d6cb00; color: #000066">Check</button>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                <label style=" font-weight: 750; font-size: medium;">PSA ID</label>
+                <label style=" font-weight: 750; font-size: medium; color:white;">PSA ID</label>
                 @if ($this->res != null)
                     <textarea class="form-control " rows="6" style="box-shadow: 2px 2px 3px gray; background-color: white; color: black; font-weight: bold; text-align:left;" id="message-text" readonly>{{ implode("\n", $res)}}</textarea>
                 @endif

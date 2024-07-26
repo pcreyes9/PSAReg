@@ -47,6 +47,7 @@ class NonMemberReg extends Component
     }
 
     public function submit (){
+        dd(ucfirst($this->last_name));
         $date = Carbon::now()->format('mdy - his');
         // dd($date->toDateTimeString());
         $err = "";
@@ -80,9 +81,9 @@ class NonMemberReg extends Component
             else{
                 Registration::create([
                     'psa_id' => '0000',
-                    'last_name' => $this->last_name,
-                    'first_name' => $this->first_name,
-                    'middle_name' => $this->middle_initial,
+                    'last_name' => ucfirst($this->last_name),
+                    'first_name' => ucfirst($this->first_name),
+                    'middle_name' => ucfirst($this->middle_initial),
                     'reg_type' => $this->regType,
                     'hospital_name' => $this->hospitalName,
                     'hospital_address' => $this->hospitalAddress,
@@ -99,7 +100,7 @@ class NonMemberReg extends Component
                 session()->flash('message', 'YOU ARE REGISTERED SUCCESSFULLY, DR ' . $this->last_name . '!');
                 // dd($this->email);
                 
-                return redirect()->route('emailsend', ['email' => $this->email, 'name' => $this->last_name]);
+                return redirect()->route('emailsend', ['email' => $this->email, 'name' => ucfirst($this->last_name)]);
                 // sleep(seconds: 3);
                 return $this->cleanvars();
                 

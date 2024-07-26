@@ -22,8 +22,8 @@
                 <a href="{{route('memReg')}}" class="btn btn-primary mt-3" style="font-size: 20px; background: #d6cb00; color: #000066">Members Registration</a>
                 <a href="{{route('nonMemReg')}}" class="btn btn-dark mt-3 ml-sm-3 " style="font-size: 20px;; ">Non-Members Registration</a>
             </div>
-            <a class="gallery-popup wrapper" href="images/reg rate annual conve 2024.jpg">
-                <img class="img-fluid w-75 zoom fade-img" style="box-shadow: 3px 3px 5px;" src="images/reg rate annual conve 2024.jpg" alt="">
+            <a class="gallery-popup wrapper" href="images/Annual Convention 2024 Registration Rates.png">
+                <img class="img-fluid w-75 zoom fade-img" style="box-shadow: 3px 3px 5px;" src="images/Annual Convention 2024 Registration Rates.png" alt="">
             </a>
         </div>
         
