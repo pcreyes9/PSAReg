@@ -47,7 +47,7 @@ class NonMemberReg extends Component
     }
 
     public function submit (){
-        dd(ucfirst($this->last_name));
+        // dd(ucfirst($this->last_name));
         $date = Carbon::now()->format('mdy - his');
         // dd($date->toDateTimeString());
         $err = "";
