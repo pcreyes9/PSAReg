@@ -63,7 +63,7 @@
             </div>
         
 
-            <div class="col-md-4">
+            <div class="col-md-4 mt-4">
                 <label style=" font-weight: 750; font-size: medium; color:white">Type of Registration</label><br>
                 {{-- <div class="pl-5 ml-5 text-left"> --}}
                     <div class="form-check">
@@ -82,7 +82,7 @@
             </div>
 
            
-            <div class="col-md-4">
+            <div class="col-md-4 mt-4">
                 <label style=" font-weight: 750; font-size: medium; color:white">Senior Citizen</label><br>
                 <div class="form-check">
                     <input style="color: white"  class="form-check-input" type="radio" name="radioSenior" value = "yesSen" id="yesSen" wire:model.live='senior' required>
