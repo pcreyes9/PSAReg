@@ -3,7 +3,7 @@
         <x-slot name="logo">
             <x-authentication-card-logo />
         </x-slot>
-
+        <h1 class="text-center">THIS IS AN ADMIN LOGIN</h1>
         <x-validation-errors class="mb-4" />
 
         @if (session('status'))
@@ -11,7 +11,7 @@
                 {{ session('status') }}
             </div>
         @endif
-
+        
         <form method="POST" action="{{ route('login') }}">
             @csrf
 

@@ -7,11 +7,10 @@
 
             <x-validation-errors class="mb-4" />
             {{-- The Master doesn't talk, he acts. --}}
+            <h1 class="text-center">RESTRICTED AREA</h1>
 
-            <form method="POST" action="{{ route('register') }}">
+            {{-- <form method="POST" action="{{ route('register') }}">
                 @csrf
-                {{-- <input type="text" wire:model.live='id'>
-                <h1>{{$id}}</h1> --}}
 
                 <div class="mt-4">
                     <x-label for="first_name" value="{{ __('Username') }}" />
@@ -59,7 +58,7 @@
                         {{ __('Register') }}
                     </x-button>
                 </div>
-            </form>
+            </form> --}}
         </x-authentication-card>
     </x-guest-layout>
 </div>
