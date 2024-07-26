@@ -158,11 +158,11 @@ class MemReg extends Component
                 }
             }
             else{
-                session()->flash('message', 'Invalid file format of proof of payment.');
+                session()->flash('message', 'Invalid file format of proof of payment. Please try refreshing the page.');
             }
         }
         else{
-            session()->flash('message', 'Invalid file format of proof of payment. Please try refreshing the page');
+            session()->flash('message', 'Invalid file format of proof of payment. Please try refreshing the page.');
         }
     }
 

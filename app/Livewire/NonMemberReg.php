@@ -50,7 +50,10 @@ class NonMemberReg extends Component
         $date = Carbon::now()->format('mdy - his');
         // dd($date->toDateTimeString());
         $err = "";
-        if(strtolower($this->paymentProof->extension()) == "heic" || strtolower($this->paymentProof->extension()) == "jpg" || strtolower($this->paymentProof->extension()) == "png" || strtolower($this->paymentProof->extension()) ==  "jpeg" || strtolower($this->paymentProof->extension()) == "gif"){
+        if( $this->paymentProof == null){
+            session()->flash('message', 'Invalid file format of proof of payment. Please try refreshing the page');
+        }
+        else if(strtolower($this->paymentProof->extension()) == "heic" || strtolower($this->paymentProof->extension()) == "jpg" || strtolower($this->paymentProof->extension()) == "png" || strtolower($this->paymentProof->extension()) ==  "jpeg" || strtolower($this->paymentProof->extension()) == "gif"){
             //IMG SENIOR
             // dd($this->senior);
             if($this->imgSenior != null && $this->imgSenior != "" && $this->senior == "yesSen"){
@@ -103,9 +106,8 @@ class NonMemberReg extends Component
             }
         }
         else{
-            session()->flash('message', 'Invalid file format of proof of payment.');
+            session()->flash('message', 'Invalid file format of proof of payment. Please try refreshing the page.');
         }
-        
     }
 
     public function cleanvars(){
