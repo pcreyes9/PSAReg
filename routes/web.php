@@ -53,7 +53,7 @@ Route::get('/emailsend', function (Request $request){
     
     Mail::to($email)->send(new MyTestEmail($name));
     
-    return redirect()->route('reg')->with('success', 'Your registration is on process, Dr. ' . $name . '. We will update you in this email, ' . $email);
+    return redirect()->route('reg')->with('success', 'Thank you for your registration, Dr. ' . $name . '.');
     
 })->name('emailsend');
 

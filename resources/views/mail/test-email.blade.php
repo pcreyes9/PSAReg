@@ -1,10 +1,10 @@
 Dear Dr. {{ $name }},
 <br>
 <br>
-Thank you for registering to our Annual Convention 2024. We are currently proccessing your registration.
+Greetings!
 <br>
 <br>
-Thank you and we hope to see you soon!
+Thank you for successfully registering for our Annual Convention 2024. We will be sending the unique access code and the QR code via email.
 <br>
 <br>
 <br>
