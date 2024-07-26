@@ -115,7 +115,12 @@
                                             {{ $regs->membership }}    
                                         </td>
                                         <td class="px-6 py-4 text-center">
-                                            {{ $regs->reg_type }}    
+<!--                                             {{ $regs->reg_type }}   -->
+                                            @if($regs->reg_type == 'regOnline')
+                                                Online
+                                            @elseif($regs->reg_type == regFace)
+                                                Face to Face
+                                            @endif
                                         </td>
                                         @if ($regs->trainee_cert != "Not available")
                                             <td class="px-6 py-4 text-center">
