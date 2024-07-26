@@ -82,6 +82,9 @@
                                         Membership
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-center">
+                                        Reg Type
+                                    </th>
+                                    <th scope="col" class="px-6 py-3 text-center">
                                         Proof if Senior/Trainee
                                     </th>
                                 </tr>
@@ -110,6 +113,9 @@
                                         </td>
                                         <td class="px-6 py-4 text-center">
                                             {{ $regs->membership }}    
+                                        </td>
+                                        <td class="px-6 py-4 text-center">
+                                            {{ $regs->reg_type }}    
                                         </td>
                                         @if ($regs->trainee_cert != "Not available")
                                             <td class="px-6 py-4 text-center">
