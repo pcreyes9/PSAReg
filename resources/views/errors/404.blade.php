@@ -18,7 +18,7 @@
               </div>
               <div class="error-body">
                 Try using the button below to go to main page of the site <br>
-                <a href="{{route('home')}}" class="btn btn-primary">Back to Home Page</a>
+                <a href="{{route('reg')}}" class="btn btn-primary">Back to Home Page</a>
               </div>
             </div>
           </div>

@@ -25,16 +25,12 @@ use Barryvdh\DomPDF\Facade\Pdf;
 */
 
 Route::get('/', function () {
-    return view('home/landing');
-})->name('home');
-
-Route::get('/venue', function () {
-    return view('home/venue');
-})->name('venue');
-
-Route::get('/registration', function () {
     return view('home/pages/registration-details');
 })->name('reg');
+
+// Route::get('/registration', function () {
+//     return view('home/pages/registration-details');
+// })->name('reg');
 
 Route::get('/mem-registration', function () {
     return view('registration.mem-registration');
@@ -44,9 +40,9 @@ Route::get('/non-mem-registration', function () {
     return view('registration.non-mem-registration');
 })->name('nonMemReg');
 
-Route::get('/psa-id-checker', function () {
-    return view('registration.psa-id-checker');
-})->name('psaID-checker');
+// Route::get('/psa-id-checker', function () {
+//     return view('registration.psa-id-checker');
+// })->name('psaID-checker');
 
 
 
