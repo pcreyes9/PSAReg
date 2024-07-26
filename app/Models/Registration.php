@@ -13,6 +13,7 @@ class Registration extends Model
         'psa_id',
         'last_name',
         'first_name',
+        'reg_type',
         'middle_name',
         'hospital_name',
         'hospital_address',
@@ -23,5 +24,6 @@ class Registration extends Model
         'senior_citizen',
         'proof_payment',
         'trainee_cert'
+
     ];
 }

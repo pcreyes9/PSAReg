@@ -40,10 +40,13 @@ Route::get('/mem-registration', function () {
     return view('registration.mem-registration');
 })->name('memReg');
 
+Route::get('/non-mem-registration', function () {
+    return view('registration.non-mem-registration');
+})->name('nonMemReg');
+
 Route::get('/psa-id-checker', function () {
     return view('registration.psa-id-checker');
 })->name('psaID-checker');
-
 
 
 

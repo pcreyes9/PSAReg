@@ -1,7 +1,6 @@
 <div class="bg-white">
   <div class="container">
     <div class="logo-area">
-
         <div class="row align-items-center">
           <div class="mb-3 text-center col-lg-3 text-lg-left mb-md-5 mb-lg-0">
             <a class="d-block" href="">
@@ -35,9 +34,6 @@
                       psainc_sec@yahoo.com</p>
                   </div>
                 </div>
-              </li>
-              <li class="header-get-a-quote">
-                <a class="btn btn-primary" href="contact.html">Get A Quote</a>
               </li>
             </ul><!-- Ul end -->
           </div><!-- header right end --> --}}

@@ -40,7 +40,7 @@
             {{-- style="background-image:url(images/bg/master.jpg); " --}}
 
             <div style="overflow: hidden; position: relative;">
-                <img class="master-bg" src="images/bg/master.jpg" alt="">
+                <img class="master-bg" src="images/bg/bgReg.jpg" alt="">
                 <div style="position: relative">
                     @yield('content')
                 </div>

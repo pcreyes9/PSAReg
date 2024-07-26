@@ -39,7 +39,7 @@ Description: Constra - Construction Html5 Template
   overflow: hidden;
   background-size: 100% 100%;   
 
-  opacity: 0.4;
+  opacity: 1.0;
   left: 0;
   top: 0;
   width: 100%;
@@ -395,7 +395,7 @@ a:focus {
 /* Title Border */
 
 .section-header{
-  font-size: 24px;
+  font-size: 27px;
   line-height: 28px;
   letter-spacing: 1px;
   margin: 0;
@@ -799,7 +799,7 @@ ul.top-info li p.info-text {
 
 .header-one,
 .header-one .site-navigation {
-  background: #000066;
+  background: #801a26;
 }
 
 .header-one .navbar-collapse {
@@ -1702,7 +1702,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 .into-sub-title {
   font-weight: 900;
   text-transform: uppercase;
-  font-size: 32px;
+  font-size: 40px;
   line-height: normal;
   margin: 10px 0;
 }
@@ -2658,7 +2658,7 @@ img.testimonial-thumb {
 
 /*-- Copyright --*/
 .copyright {
-  background: #000066;
+  background: #801a26;
   color: #ffffff;
   padding: 25px 0;
   position: relative;

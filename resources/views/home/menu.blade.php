@@ -7,8 +7,9 @@
               <span class="navbar-toggler-icon"></span>
           </button>
           <div id="navbar-collapse" class="collapse navbar-collapse opa">
+            
             <ul class="mr-auto nav navbar-nav">
-              <li class="nav-item" ><a class="nav-link" href="{{route('home')}}" >HOME</a></li>
+              <li class="nav-item" ><a class="nav-link" href="https://psa-inc.org/" >HOME</a></li>
               <li class="nav-item"><a class="nav-link" href="{{route('reg')}}">REGISTRATION</a></li>
             </ul>
           </div>
