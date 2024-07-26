@@ -52,28 +52,6 @@
             <input style="box-shadow: 2px 2px 3px gray; background-color: white; color: black; font-weight: bold;s" class="form-control form-control-subject" type="number" name="subject" id="subject" wire:model="contactNumber" placeholder="" required>
             </div>
         </div>
-        <div class="col-md-4">
-            <label style=" font-weight: 750; font-size: medium; color: white">Gender</label><br>
-            <div class="form-check">
-                <input style="color: white" class="form-check-input" type="radio" readonly name="radioGender" value = "male" id="male" disabled required>
-                @if ($gender == "Male")
-                    <input style="color: white" class="form-check-input" type="radio" readonly name="radioGender" value = "male" id="male" required checked>
-                @endif
-                <label style="color: white" class="form-check-label" for="male">
-                    Male
-                </label>
-            </div>
-            <div class="form-check">
-                <input style="color: white" class="form-check-input" type="radio" readonly name="radioGender" value = "female" id="female" disabled required>
-                @if ($gender == "Female")
-                    <input style="color: white" class="form-check-input" type="radio" readonly name="radioGender" value = "female" id="female" required checked>
-                @endif
-                <label style="color: white" class="form-check-label" for="female">
-                    Female
-                </label>
-                </div>
-            </div>
-            
             <div class="col-md-4">
                 <label style=" font-weight: 750; font-size: medium; color: white">Membership Type</label><br>
                 {{-- <div class="pl-5 ml-5 text-left"> --}}
@@ -107,7 +85,7 @@
                 {{-- </div> --}}
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-4 mt-4">
                 <label style=" font-weight: 750; font-size: medium; color: white">Type of Registration</label><br>
                 {{-- <div class="pl-5 ml-5 text-left"> --}}
                     <div class="form-check">
@@ -125,10 +103,8 @@
                 {{-- </div> --}}
             </div>
 
-            
-            
             @if ($memType == 'RM')
-                <div class="col-md-4">
+                <div class="col-md-4 mt-4">
                     <label style=" font-weight: 750; font-size: medium; color:white">Senior Citizen</label><br>
                     <div class="form-check">
                         <input style="color: white" class="form-check-input" type="radio" name="radioSenior" value = "yesSen" id="yesSen" wire:model.live='senior' required>

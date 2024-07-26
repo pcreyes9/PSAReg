@@ -20,7 +20,7 @@ class MemReg extends Component
     public $first_name;
     public $memType;
     public $senior;
-    public $gender, $contactNumber, $email, $hospitalName, $hospitalAddress, $middle_initial, $paymentProof, $imgName, $imgSenior, $imgCert;
+    public $contactNumber, $email, $hospitalName, $hospitalAddress, $middle_initial, $paymentProof, $imgName, $imgSenior, $imgCert;
     public $imgNamePayment, $imgNameSenior = "", $imgNameCert = "";
     public $regType;
 
@@ -33,7 +33,6 @@ class MemReg extends Component
         $this->last_name=Members::where('member_id_no', $this->PSAid)->value('mem_last_name');
         $this->first_name=Members::where('member_id_no', $this->PSAid)->value('mem_first_name');
         $this->middle_initial=Members::where('member_id_no', $this->PSAid)->value('mem_middle_name');
-        $this->gender=Members::where('member_id_no', $this->PSAid)->value('mem_gender');
         $this->memType=Members::where('member_id_no', $this->PSAid)->value('psa_mem_type');
 
         if(strlen($this->PSAid) > 4){
@@ -141,7 +140,7 @@ class MemReg extends Component
                         'hospital_address' => $this->hospitalAddress,
                         'email' => $this->email,
                         'contact_number' => $this->contactNumber,
-                        'gender' => $this->gender,
+                        'gender' => 'N/A',
                         'membership' => $this->memType,
             
                         'senior_citizen' => $imgNameSenior,
