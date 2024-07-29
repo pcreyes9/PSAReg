@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\DashboardController;
 use Barryvdh\DomPDF\Facade\Pdf;
+use Carbon\Carbon;
 
 /*
 |--------------------------------------------------------------------------
@@ -84,7 +85,7 @@ Route::middleware([
     });
 
     Route::get('/admin/dashboard/export-excel', function () {
-        return Excel::download(new ExcelExport, 'regs.xlsx');
+        return Excel::download(new ExcelExport, 'Registration Annual Convention as of '. Carbon::now()->format('mdy - his') .'.xlsx');
     })->name('exportExcel');
 
     // Route::get('/admin/dashboard/export-pdf', function (Request $request) {
