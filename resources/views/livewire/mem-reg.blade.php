@@ -135,12 +135,13 @@
                     <input style="color: white" type="file" wire:model="imgCert" required>
                 </div>
             @endif
-            <div class="col-md-4 mt-4">
-                <label style=" font-weight: 750; font-size: medium; color:white">Proof of Payment</label><br>
-                <input style="color: white" type="file" wire:model="paymentProof" required>
-                @error('paymentProof') <span class="error">{{ $message }}</span> @enderror
-            </div>
-            
+            @if($memType != 'LM')
+                <div class="col-md-4 mt-4">
+                    <label style=" font-weight: 750; font-size: medium; color:white">Proof of Payment</label><br>
+                    <input style="color: white" type="file" wire:model="paymentProof" required>
+                    @error('paymentProof') <span class="error">{{ $message }}</span> @enderror
+                </div>
+            @endif
         </div>
         
         <br>
