@@ -29,6 +29,13 @@
             <h2>
                 Membership: {{ $infos->membership }}
             </h2>
+            <h2>
+                @if($regs->reg_type == 'regOnline')
+                    Reg Type: Virtual (Online)
+                @elseif($regs->reg_type == 'regFace')
+                    Reg Type: Face to Face
+                @endif
+            </h2>
             @endif
             
             <h3>
@@ -36,7 +43,7 @@
             </h3>
             <br>
             <div class="text-center">
-                <img class="img" src='storage/photos/proof of payments/{{ $infos->proof_payment }}'   alt="">
+                <img class="img w-75" src='storage/photos/proof of payments/{{ $infos->proof_payment }}'   alt="">
             </div>
             <div class="page-break"></div>
         @endforeach
