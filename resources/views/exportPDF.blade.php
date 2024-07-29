@@ -30,9 +30,9 @@
                 Membership: {{ $infos->membership }}
             </h2>
             <h2>
-                @if($regs->reg_type == 'regOnline')
+                @if($infos->reg_type == 'regOnline')
                     Reg Type: Virtual (Online)
-                @elseif($regs->reg_type == 'regFace')
+                @elseif($infos->reg_type == 'regFace')
                     Reg Type: Face to Face
                 @endif
             </h2>
