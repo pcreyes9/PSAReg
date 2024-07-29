@@ -24,7 +24,7 @@
             <hr style="clear:both;"/>
             <h2 >PSA ID: {{ $infos->psa_id }}</h2>
             @if ($infos->membership == 'RM' && $infos->senior_citizen != 'Not available')
-                <h2>Membership: {{ $infos->membership }} | with Senior</h2>
+                <h2>Membership: {{ $infos->membership }} | with Senior/PWD</h2>
             @else
             <h2>
                 Membership: {{ $infos->membership }}
