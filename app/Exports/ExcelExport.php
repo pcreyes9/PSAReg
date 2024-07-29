@@ -20,6 +20,7 @@ class ExcelExport implements FromCollection, WithHeadings, ShouldAutoSize
             'last_name',
             'first_name',
             'middle_name',
+            'type or registration',
             'hospital_name',
             'hospital_address',
             'email',
