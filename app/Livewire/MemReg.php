@@ -97,9 +97,9 @@ class MemReg extends Component
                 'gender' => 'N/A',
                 'membership' => $this->memType,
         
-                'senior_citizen' => 'LIFE MEMBER',
-                'proof_payment' => 'LIFE MEMBER',
-                'trainee_cert' => 'LIFE MEMBER'
+                'senior_citizen' => 'Not available',
+                'proof_payment' => 'Not available',
+                'trainee_cert' => 'Not available'
             ]);
             
             session()->flash('message', 'YOU ARE REGISTERED SUCCESSFULLY, DR ' . $this->last_name . '!');
