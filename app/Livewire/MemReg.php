@@ -83,7 +83,34 @@ class MemReg extends Component
         // dd($date->toDateTimeString());
         $err = "";
 
-        if(Registration::where('psa_id', '=', $this->PSAid)->exists()){
+        if($this->memType == 'LM'){
+           Registration::create([
+                'psa_id' => $this->PSAid,
+                'last_name' => $this->last_name,
+                'first_name' => $this->first_name,
+                'reg_type' => $this->regType,
+                'middle_name' => $this->middle_initial,
+                'hospital_name' => $this->hospitalName,
+                'hospital_address' => $this->hospitalAddress,
+                'email' => $this->email,
+                'contact_number' => $this->contactNumber,
+                'gender' => 'N/A',
+                'membership' => $this->memType,
+        
+                'senior_citizen' => 'LIFE MEMBER',
+                'proof_payment' => 'LIFE MEMBER',
+                'trainee_cert' => 'LIFE MEMBER'
+            ]);
+            
+            session()->flash('message', 'YOU ARE REGISTERED SUCCESSFULLY, DR ' . $this->last_name . '!');
+            // dd($this->email);
+            
+            return redirect()->route('emailsend', ['email' => $this->email, 'name' => $this->last_name]);
+            // sleep(seconds: 3);
+            return $this->cleanvars(); 
+        }
+
+        else if(Registration::where('psa_id', '=', $this->PSAid)->exists()){
             session()->flash('message', 'You are already registered. If you have any concern about your registration, please kindly reply to the email we sent to '. Registration::where('psa_id', '=', $this->PSAid)->value('email') .'. Thank you!');
         }
         else if( $this->paymentProof == null){
