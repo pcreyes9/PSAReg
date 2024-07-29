@@ -105,7 +105,7 @@
 
             @if ($memType == 'RM')
                 <div class="col-md-4 mt-4">
-                    <label style=" font-weight: 750; font-size: medium; color:white">Senior Citizen</label><br>
+                    <label style=" font-weight: 750; font-size: medium; color:white">Senior Citizen/PWD ID</label><br>
                     <div class="form-check">
                         <input style="color: white" class="form-check-input" type="radio" name="radioSenior" value = "yesSen" id="yesSen" wire:model.live='senior' required>
                         <label style="color: white" class="form-check-label" for="yesSen">
