@@ -12,7 +12,13 @@
                     {{-- <x-application-logo class="block h-12 w-auto" />    --}}
                 
                     <h1 class="mb-8 text-2xl font-medium text-gray-900">
-                        Personal Information
+                        Online:
+                    </h1>
+                    <h1 class="mb-8 text-2xl font-medium text-gray-900">
+                        Face to Face:
+                    </h1>
+                     <h1 class="mb-8 text-2xl font-medium text-gray-900">
+                        Total Registration:
                     </h1>
                     
                     {{-- <form>
