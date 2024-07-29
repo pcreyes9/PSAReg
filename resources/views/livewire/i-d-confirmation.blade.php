@@ -9,7 +9,7 @@
             {{-- The Master doesn't talk, he acts. --}}
             <h1 class="text-center">RESTRICTED AREA</h1>
 
-            {{-- <form method="POST" action="{{ route('register') }}">
+            <form method="POST" action="{{ route('register') }}">
                 @csrf
 
                 <div class="mt-4">
@@ -58,7 +58,7 @@
                         {{ __('Register') }}
                     </x-button>
                 </div>
-            </form> --}}
+            </form> 
         </x-authentication-card>
     </x-guest-layout>
 </div>
