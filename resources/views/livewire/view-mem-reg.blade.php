@@ -85,14 +85,14 @@
                                         <td class="px-6 py-4 text-center">
                                             Trainee Cert
                                             <a href="{{ url('/admin/viewMemReg/download/trainee/' . $regs->trainee_cert) }}">
-                                                <img class="pt-2 h-auto max-w-lg mx-auto text-center hover:w-full w-14" src="{{ url('storage/photos/trainee cert/'. $regs->trainee_cert) }}" alt="Logo">
+                                                <img class="pt-2 h-auto max-w-lg mx-auto text-center hover:w-full w-14" src="{{ url('storage/photos/trainee cert/'. $regs->trainee_cert) }}" alt="click to download">
                                             </a>
                                         </td>
                                     @elseif ($regs->senior_citizen != "Not available")
                                         <td class="px-6 py-4 text-center">
                                             Senior ID
                                             <a href="{{ url('/admin/viewMemReg/download/senior/' . $regs->senior_citizen) }}">
-                                                <img class="pt-2  h-auto max-w-lg mx-auto text-center hover:w-full w-14" src="{{ url('storage/photos/senior ids/'. $regs->senior_citizen) }}" alt="Logo">
+                                                <img class="pt-2  h-auto max-w-lg mx-auto text-center hover:w-full w-14" src="{{ url('storage/photos/senior ids/'. $regs->senior_citizen) }}" alt="click to download">
                                             </a>
                                         </td>
                                     @else
@@ -104,10 +104,8 @@
                             @endforeach
                         </tbody>
                     </table>
-                    
                 @endif
             </div>
-            
         @endif
 
         <div class="overflow-hidden shadow-xl sm:rounded-lg bg-white mt-5">
@@ -238,14 +236,14 @@
                                             <td class="px-6 py-4 text-center">
                                                 Trainee Cert
                                                 <a href="{{ url('/admin/viewMemReg/download/trainee/' . $regs->trainee_cert) }}">
-                                                    <img class="pt-2 h-auto max-w-lg mx-auto text-center hover:w-full w-14" src="{{ url('storage/photos/trainee cert/'. $regs->trainee_cert) }}" alt="Logo">
+                                                    <img class="pt-2 h-auto max-w-lg mx-auto text-center hover:w-full w-14" src="{{ url('storage/photos/trainee cert/'. $regs->trainee_cert) }}" alt="click to download">
                                                 </a>
                                             </td>
                                         @elseif ($regs->senior_citizen != "Not available")
                                             <td class="px-6 py-4 text-center">
                                                 Senior ID
                                                 <a href="{{ url('/admin/viewMemReg/download/senior/' . $regs->senior_citizen) }}">
-                                                    <img class="pt-2  h-auto max-w-lg mx-auto text-center hover:w-full w-14" src="{{ url('storage/photos/senior ids/'. $regs->senior_citizen) }}" alt="Logo">
+                                                    <img class="pt-2  h-auto max-w-lg mx-auto text-center hover:w-full w-14" src="{{ url('storage/photos/senior ids/'. $regs->senior_citizen) }}" alt="click to download">
                                                 </a>
                                             </td>
                                         @else
