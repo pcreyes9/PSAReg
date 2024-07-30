@@ -1,5 +1,115 @@
 <div class="py-12">
     <div class="max-w-full mx-auto sm:px-6 lg:px-8">
+       
+        <button class="mt-2 mb-5 bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 ml-3 rounded inline-flex items-center" wire:click="showChecker">
+            {{-- <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg> --}}
+            <svg class="w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4H1m3 4H1m3 4H1m3 4H1m6.071.286a3.429 3.429 0 1 1 6.858 0M4 1h12a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1Zm9 6.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z"/>
+            </svg>
+            <span >Search Registrant</span>
+        </button>
+        @if ($show)
+            <div class=" mt-5 overflow-hidden shadow-xl sm:rounded-lg bg-white m-5 p-5">
+                <div>
+                    <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Enter Last Name: </label>
+                    <input type="text" wire:model.live='name'  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"  required />
+                </div>
+                @if ($name != 'null' || $name != '')
+                    <table class="w-full text-sm text-left rtl:text-right mt-5 ">
+                        {{-- {{ $sort }} --}}
+                        <thead class="text-sm text-gray-700 uppercase bg-gray-100  ">
+                            <tr>
+                                <th scope="col" class="px-6 py-3 text-center ">
+                                    ID
+                                </th>
+                                <th scope="col" class="px-6 py-3 text-center">
+                                    PSA ID
+                                </th>
+                                <th scope="col" class="px-6 py-3 ">
+                                    Last Name
+                                </th>
+                                <th scope="col" class="px-6 py-3 ">
+                                    First Name
+                                </th>
+                                <th scope="col" class="px-6 py-3 text-center">
+                                    Middle Initial
+                                </th>
+                                <th scope="col" class="px-6 py-3 ">
+                                    Email
+                                </th>
+                                <th scope="col" class="px-6 py-3 text-center">
+                                    Membership
+                                </th>
+                                <th scope="col" class="px-6 py-3 text-center">
+                                    Reg Type
+                                </th>
+                                <th scope="col" class="px-6 py-3 text-center">
+                                    Proof if Senior/Trainee
+                                </th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody>
+                            @foreach ($res as $regs)
+                                <tr class="bg-white border-b hover:bg-gray-50 dark:hover:bg-gray-100">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center ">
+                                        {{ $regs->id }}    
+                                    </th>
+                                    <td class="px-6 py-4 text-center">
+                                        {{ $regs->psa_id }}    
+                                    </td>
+                                    <td class="px-6 py-4 ">
+                                        {{ $regs->last_name }}    
+                                    </td>
+                                    <td class="px-6 py-4 ">
+                                        {{ $regs->first_name }}    
+                                    </td>
+                                    <td class="px-6 py-4 text-center">
+                                        {{ $regs->middle_name }}    
+                                    </td>
+                                    <td class="px-6 py-4 ">
+                                        {{ $regs->email }}    
+                                    </td>
+                                    <td class="px-6 py-4 text-center">
+                                        {{ $regs->membership }}    
+                                    </td>
+                                    <td class="px-6 py-4 text-center">
+                                        {{-- <!--  {{ $regs->reg_type }}   --> --}}
+                                        @if($regs->reg_type == 'regOnline')
+                                            Online
+                                        @elseif($regs->reg_type == 'regFace')
+                                            Face to Face
+                                        @endif
+                                    </td>
+                                    @if ($regs->trainee_cert != "Not available")
+                                        <td class="px-6 py-4 text-center">
+                                            Trainee Cert
+                                            <a href="{{ url('/admin/viewMemReg/download/trainee/' . $regs->trainee_cert) }}">
+                                                <img class="pt-2 h-auto max-w-lg mx-auto text-center hover:w-full w-14" src="{{ url('storage/photos/trainee cert/'. $regs->trainee_cert) }}" alt="Logo">
+                                            </a>
+                                        </td>
+                                    @elseif ($regs->senior_citizen != "Not available")
+                                        <td class="px-6 py-4 text-center">
+                                            Senior ID
+                                            <a href="{{ url('/admin/viewMemReg/download/senior/' . $regs->senior_citizen) }}">
+                                                <img class="pt-2  h-auto max-w-lg mx-auto text-center hover:w-full w-14" src="{{ url('storage/photos/senior ids/'. $regs->senior_citizen) }}" alt="Logo">
+                                            </a>
+                                        </td>
+                                    @else
+                                        <td class="px-6 py-4 text-center">
+                                            -
+                                        </td>
+                                    @endif
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                    
+                @endif
+            </div>
+            
+        @endif
+
         <div class="overflow-hidden shadow-xl sm:rounded-lg bg-white">
             <div class="p-5">
                 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -8,12 +118,14 @@
                             {{-- {{ $sort }} --}}
                             <caption class="p-5 text-lg font-semibold text-left rtl:text-right text-gray-900 bg-white ">
                                 Membership Registration
-                                
+
                                 {{-- <p class="mt-1 text-sm font-normal text-gray-500 ">Browse a list of Flowbite products designed to help you work and play, stay organized, get answers, keep in touch, grow your business, and more.</p> --}}
-                                <button  style="text-transform: uppercase" id="dropdownRadioButton" data-dropdown-toggle="dropdownDefaultRadio" class="text-black bg-gray-300 hover:bg-gray-400 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Sort: {{ $sortName }} <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                {{-- <button  style="text-transform: uppercase" id="dropdownRadioButton" data-dropdown-toggle="dropdownDefaultRadio" class="text-black bg-gray-300 hover:bg-gray-400 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Sort: {{ $sortName }} <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                                     </svg>
-                                </button>
+                                </button> --}}
+
+                                
                                     
                                     <!-- Dropdown menu -->
                                 <div  id="dropdownDefaultRadio" class="z-10 hidden w-48 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600">
@@ -57,7 +169,7 @@
                                     </ul>
                                 </div>
                             </caption>
-                            
+
                             <thead class="text-sm text-gray-700 uppercase bg-gray-100  ">
                                 <tr>
                                     <th scope="col" class="px-6 py-3 text-center ">

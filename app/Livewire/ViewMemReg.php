@@ -12,7 +12,7 @@ use Barryvdh\DomPDF\Facade\Pdf;
 class ViewMemReg extends Component
 {
     use WithPagination;
-    public $from, $to, $sort ="regNew", $sortName="Registration ID";
+    public $from, $to, $sort ="regNew", $sortName="Registration ID", $name, $show;
 
     public function render()
     {
@@ -40,8 +40,26 @@ class ViewMemReg extends Component
             $reg = Registration::orderBy('created_at', 'ASC')->paginate(10);
             $this->sortName="Date of Registration (oldest)";
         }
+        
 
-        return view('livewire.view-mem-reg',  ['reg' => $reg]);
+        // if(strlen($this->name) >= 3){
+        //     // dd(strlen($this->name));
+        //     $this->res=array();
+        //     $this->list=DB::table('registrations')->where('last_name', 'like', '%'.$this->name )->orWhere('last_name', 'like', $this->name .'%' )->get()->toArray();
+        //     foreach($this->list as $lis){
+        //         $this->res [] = $lis->psa_id . ' - ' . $lis->last_name . ', ' . $lis->first_name;
+        //     }
+        // // dd($this->res);
+        // }
+        // $this->name = "tamayo";
+        if(strlen($this->name) >= 3){
+            $res = Registration::where('last_name', 'like', '%' . $this->name)->paginate(10);
+        }
+        else
+            $res = [];
+       
+        // dd($res);
+        return view('livewire.view-mem-reg',  ['reg' => $reg, 'res' =>$res]);
     }
 
     public function exportPDF(){
@@ -51,5 +69,13 @@ class ViewMemReg extends Component
         ]);
         return response()->streamDownload(function () use ($pdf) { echo $pdf->stream(); }, 'Registration ID ' . $this->from . ' - ' . $this->to .'.pdf');
         return redirect()->back();
+    }
+
+    public function showChecker(){
+        // dd("checker");
+        if($this->show)
+            $this->show = false;
+        else
+            $this->show = true; 
     }
 }
