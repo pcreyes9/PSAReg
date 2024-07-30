@@ -15,7 +15,7 @@
                     <input type="text" wire:model.live='name'  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"  required />
                 </div>
                 @if ($name != 'null' || $name != '')
-                    <table class="w-full text-sm text-left rtl:text-right mt-5 ">
+                    <table class="w-full text-sm text-left rtl:text-right mt-5 mb-5">
                         {{-- {{ $sort }} --}}
                         <thead class="text-sm text-gray-700 uppercase bg-gray-100  ">
                             <tr>
