@@ -110,7 +110,7 @@
             
         @endif
 
-        <div class="overflow-hidden shadow-xl sm:rounded-lg bg-white">
+        <div class="overflow-hidden shadow-xl sm:rounded-lg bg-white mt-5">
             <div class="p-5">
                 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                     <div class ="flex-col space-y-4 bg-white">
