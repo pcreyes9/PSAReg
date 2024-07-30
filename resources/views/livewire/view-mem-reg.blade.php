@@ -243,7 +243,7 @@
                                             <td class="px-6 py-4 text-center">
                                                 Senior ID
                                                 <a href="{{ url('/admin/viewMemReg/download/senior/' . $regs->senior_citizen) }}">
-                                                    <img class="pt-2  h-auto max-w-lg mx-auto text-center hover:w-full w-14" src="{{ url('storage/photos/senior ids/'. $regs->senior_citizen) }}" alt="click to download">
+                                                    <img class="pt-2  h-auto max-w-lg mx-auto text-center hover:w-full w-14" src="{{ url('storage/photos/senior ids/'. $regs->senior_citizen) }}" alt="Logo">
                                                 </a>
                                             </td>
                                         @else
