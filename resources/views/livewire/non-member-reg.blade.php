@@ -82,7 +82,7 @@
             </div>
 
            
-            <div class="col-md-4 mt-4">
+            {{-- <div class="col-md-4 mt-4">
                 <label style=" font-weight: 750; font-size: medium; color:white">Senior Citizen</label><br>
                 <div class="form-check">
                     <input style="color: white"  class="form-check-input" type="radio" name="radioSenior" value = "yesSen" id="yesSen" wire:model.live='senior' required>
@@ -96,16 +96,16 @@
                         No
                     </label>
                 </div>
-            </div>
+            </div> --}}
 
         
-            @if ( $senior  == 'yesSen')
+            {{-- @if ( $senior  == 'yesSen')
                 <div class="col-md-4 mt-4">
                     <label style=" font-weight: 750; font-size: medium; color:white">Senior Citizen ID</label><br>
                     <input style="color: white" type="file" wire:model="imgSenior" required>
                     @error('paymentProof') <span class="error">{{ $message }}</span> @enderror
                 </div>
-            @endif
+            @endif --}}
 
             <div class="col-md-4 mt-4">
                 <label style=" font-weight: 750; font-size: medium; color:white">Proof of Payment</label><br>
