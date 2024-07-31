@@ -5,7 +5,7 @@
     @csrf
 
     <div class="mb-5">
-        <button type="button" class="btn btn-dark solid blank mb-2" wire:click="showChecker">PSA ID Checker</button>
+        <button type="button" class="btn btn-dark solid blank mb-2" wire:click="showChecker">PSA ID NO. Checker</button>
         @if ($show)
             <div class="row mt-3">
                 <div class="col-md-4">
@@ -17,7 +17,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                    <label style=" font-weight: 750; font-size: medium; color:white;">PSA ID</label>
+                    <label style=" font-weight: 750; font-size: medium; color:white;">PSA ID No.</label>
                     @if ($this->res != null)
                         <textarea class="form-control " rows="6" style="box-shadow: 2px 2px 3px gray; background-color: white; color: black; font-weight: bold; text-align:left;" id="message-text" readonly>{{ implode("\n", $res)}}</textarea>
                     @endif
@@ -30,7 +30,7 @@
     <div class="row mt-5 p-3">
         <div class="col-md-2">
             <div class="form-group">
-                <label style=" font-weight: 750; font-size: medium; color: white" >PSA ID</label>
+                <label style=" font-weight: 750; font-size: medium; color: white" >PSA ID No.</label>
                 <input style="box-shadow: 2px 2px 3px gray; background-color: white; color: black; font-weight: bold;s" class="form-control form-control-name" name="psa_id" required autofocus autocomplete="psa_id" type="number" required  wire:model.live='PSAid' value={{$PSAid}}>
             </div>
         </div>
