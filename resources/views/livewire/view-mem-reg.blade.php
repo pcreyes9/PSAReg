@@ -195,6 +195,9 @@
                                         Reg Type
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-center">
+                                        Date
+                                    </th>
+                                    <th scope="col" class="px-6 py-3 text-center">
                                         Proof if Senior/Trainee
                                     </th>
                                 </tr>
@@ -231,6 +234,10 @@
                                             @elseif($regs->reg_type == 'regFace')
                                                 Face to Face
                                             @endif
+                                        </td>
+                                        <td class="px-6 py-4 text-center">
+                                            {{ $regs->created_at }}   
+                                            
                                         </td>
                                         @if ($regs->trainee_cert != "Not available")
                                             <td class="px-6 py-4 text-center">
