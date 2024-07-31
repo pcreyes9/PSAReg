@@ -4,10 +4,10 @@
     {{-- <div wire:loading>LOADING...</div> --}}
     @csrf
 
-    <div class="my-5">
-        <button type="button" class="btn btn-dark solid blank" wire:click="showChecker">PSA ID Checker</button>
+    <div class="mb-5">
+        <button type="button" class="btn btn-dark solid blank mb-2" wire:click="showChecker">PSA ID Checker</button>
         @if ($show)
-            <div class="row mt-5">
+            <div class="row mt-3">
                 <div class="col-md-4">
                     <div class="form-group">
                         <label style=" font-weight: 750; font-size: medium; color:white;">Enter Last Name:</label>
@@ -27,7 +27,7 @@
         @endif
     </div>
     <div class="error-container"></div>
-    <div class="row">
+    <div class="row mt-5 p-3">
         <div class="col-md-2">
             <div class="form-group">
                 <label style=" font-weight: 750; font-size: medium; color: white" >PSA ID</label>
