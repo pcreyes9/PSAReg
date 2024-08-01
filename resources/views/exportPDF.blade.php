@@ -25,17 +25,24 @@
             <h2 >PSA ID: {{ $infos->psa_id }}</h2>
             @if ($infos->membership == 'RM' && $infos->senior_citizen != 'Not available')
                 <h2>Membership: {{ $infos->membership }} | with Senior/PWD</h2>
+                <h2>
+                    @if($infos->reg_type == 'regOnline')
+                        Reg Type: Virtual (Online)
+                    @elseif($infos->reg_type == 'regFace')
+                        Reg Type: Face to Face
+                    @endif
+                </h2>
             @else
-            <h2>
-                Membership: {{ $infos->membership }}
-            </h2>
-            <h2>
-                @if($infos->reg_type == 'regOnline')
-                    Reg Type: Virtual (Online)
-                @elseif($infos->reg_type == 'regFace')
-                    Reg Type: Face to Face
-                @endif
-            </h2>
+                <h2>
+                    Membership: {{ $infos->membership }}
+                </h2>
+                <h2>
+                    @if($infos->reg_type == 'regOnline')
+                        Reg Type: Virtual (Online)
+                    @elseif($infos->reg_type == 'regFace')
+                        Reg Type: Face to Face
+                    @endif
+                </h2>
             @endif
             
             <h3>
