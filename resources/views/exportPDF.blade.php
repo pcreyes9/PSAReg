@@ -50,7 +50,7 @@
             </h3>
             <br>
             <div class="text-center">
-                <img class="img" style="height: auto; width: auto" src='storage/photos/proof of payments/{{ $infos->proof_payment }}'   alt="">
+                <img class="img" style="height: 600px; width: 50%;" src='storage/photos/proof of payments/{{ $infos->proof_payment }}'   alt="">
             </div>
             <div class="page-break"></div>
         @endforeach
