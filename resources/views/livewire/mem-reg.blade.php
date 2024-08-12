@@ -154,6 +154,28 @@
             @endif
 
             @if ($memType == 'TM')
+            <div class="col-md-4 mt-4">
+                <label style=" font-weight: 750; font-size: medium; color:white">PWD</label><br>
+                <div class="form-check">
+                    <input style="color: white" class="form-check-input" type="radio" name="radioSenior" value = "yesSen" id="yesSen" wire:model.live='senior' required>
+                    <label style="color: white" class="form-check-label" for="yesSen">
+                        Yes
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input style="color: white" class="form-check-input" type="radio" name="radioSenior" value = "noSen"  id="noSen" wire:model.live='senior'  required>
+                    <label style="color: white" class="form-check-label" for="noSen">
+                        No
+                    </label>
+                </div>
+            </div>
+                @if ( $senior  == 'yesSen')
+                <div class="col-md-4 mt-4">
+                    <label style=" font-weight: 750; font-size: medium; color: white">PWD ID</label><br>
+                    <input style="color: white" type="file" wire:model="imgSenior" required>
+                    @error('paymentProof') <span class="error">{{ $message }}</span> @enderror
+                </div>
+                @endif
                 <div class="col-md-4 mt-4">
                     <label style=" font-weight: 750; font-size: medium;  color:white">Certificate of Institution</label><br>
                     <input style="color: white" type="file" wire:model="imgCert" required>
