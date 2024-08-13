@@ -244,14 +244,14 @@
                                         <td class="px-6 py-4 text-center">
                                             {{ $regs->created_at }}   
                                         </td>
-                                        @if ($regs->trainee_cert != "Not available")
+                                        @if ($regs->senior_citizen != "Not available" && $regs->membership == "TM")
                                             <td class="px-6 py-4 text-center">
-                                                Trainee Cert
-                                                <a href="{{ url('/admin/viewMemReg/download/trainee/' . $regs->trainee_cert) }}">
-                                                    <img class="pt-2 h-auto max-w-lg mx-auto text-center hover:w-full w-14" src="{{ url('storage/photos/trainee cert/'. $regs->trainee_cert) }}" alt="download">
+                                                PWD ID
+                                                <a href="{{ url('/admin/viewMemReg/download/trainee/' . $regs->senior_citizen) }}">
+                                                    <img class="pt-2 h-auto max-w-lg mx-auto text-center hover:w-full w-14" src="{{ url('storage/photos/senior ids/'. $regs->senior_citizen) }}" alt="download">
                                                 </a>
                                             </td>
-                                        @elseif ($regs->senior_citizen != "Not available")
+                                        @elseif ($regs->senior_citizen != "Not available" && $regs->membership == "RM")
                                             <td class="px-6 py-4 text-center">
                                                 Senior ID
                                                 <a href="{{ url('/admin/viewMemReg/download/senior/' . $regs->senior_citizen) }}">

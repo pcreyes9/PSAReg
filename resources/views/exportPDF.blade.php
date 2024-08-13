@@ -32,6 +32,16 @@
                         Reg Type: Face to Face
                     @endif
                 </h2>
+
+            @elseif ($infos->membership == 'TM' && $infos->senior_citizen != 'Not available')
+                <h2>Membership: {{ $infos->membership }} | with PWD</h2>
+                <h2>
+                    @if($infos->reg_type == 'regOnline')
+                        Reg Type: Virtual (Online)
+                    @elseif($infos->reg_type == 'regFace')
+                        Reg Type: Face to Face
+                    @endif
+                </h2>
             @else
                 <h2>
                     Membership: {{ $infos->membership }}
