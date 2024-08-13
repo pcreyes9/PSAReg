@@ -134,31 +134,30 @@ class MemReg extends Component
                 }
                 
                 //IMG SENIOR ID
-                // dd($this->senior);
-                if($this->imgSenior != null && $this->imgSenior != "" && $this->senior == "yesSen" && $this->memType == "RM"){
-                    if(strtolower($this->imgSenior->extension()) == "jpg" || strtolower($this->imgSenior->extension()) == "png" || strtolower($this->imgSenior->extension()) ==  "jpeg" || strtolower($this->imgSenior->extension()) == "gif"){
-                        $imgNameSenior = $this->PSAid .' '. $this->last_name . " - Senior ID " . $date . '.' . $this->imgSenior->extension();
-                        $this->imgSenior->storeAs('photos/senior ids', $imgNameSenior);
+                if($this->imgSenior != null && $this->imgSenior != "" && $this->senior == "yesSen"){
+                    if($this->memType == "RM"){
+                        if(strtolower($this->imgSenior->extension()) == "jpg" || strtolower($this->imgSenior->extension()) == "png" || strtolower($this->imgSenior->extension()) ==  "jpeg" || strtolower($this->imgSenior->extension()) == "gif"){
+                            $imgNameSenior = $this->PSAid .' '. $this->last_name . " - Senior ID " . $date . '.' . $this->imgSenior->extension();
+                            $this->imgSenior->storeAs('photos/senior ids', $imgNameSenior);
+                        }
+                        else{
+                            $err = "Invalid file format of senior ID.";
+                            // session()->flash('message', 'Invalid file format of senior id.');
+                        }
                     }
-                    else{
-                        $err = "Invalid file format of senior ID.";
-                        // session()->flash('message', 'Invalid file format of senior id.');
-                    }
+                    else if($this->memType == "TM"){
+                        if(strtolower($this->imgSenior->extension()) == "jpg" || strtolower($this->imgSenior->extension()) == "png" || strtolower($this->imgSenior->extension()) ==  "jpeg" || strtolower($this->imgSenior->extension()) == "gif"){
+                            $imgNameSenior = $this->PSAid .' '. $this->last_name . " - PWD ID " . $date . '.' . $this->imgSenior->extension();
+                            $this->imgSenior->storeAs('photos/senior ids', $imgNameSenior);
+                        }
+                        else{
+                            $err = "Invalid file format of PWD ID.";
+                            // session()->flash('message', 'Invalid file format of senior id.');
+                        }
+                    } 
                 }
-                else{
-                    $imgNameSenior = "Not available";
-                }
-
-                //IMG PWD ID TRAINEE
-                if($this->imgSenior != null && $this->imgSenior != "" && $this->senior == "yesSen" && $this->memType == "TM"){
-                    if(strtolower($this->imgSenior->extension()) == "jpg" || strtolower($this->imgSenior->extension()) == "png" || strtolower($this->imgSenior->extension()) ==  "jpeg" || strtolower($this->imgSenior->extension()) == "gif"){
-                        $imgNameSenior = $this->PSAid .' '. $this->last_name . " - PWD ID " . $date . '.' . $this->imgSenior->extension();
-                        $this->imgSenior->storeAs('photos/senior ids', $imgNameSenior);
-                    }
-                    else{
-                        $err = "Invalid file format of PWD ID.";
-                        // session()->flash('message', 'Invalid file format of senior id.');
-                    }
+                else if($this->imgSenior == null && $this->senior == "yesSen"){
+                    $err = "Invalid Senior/PWD ID file format. If this error persists, please select 'NO' and send your Senior/PWD ID to this email: annualconvention.psa@gmail.com.";
                 }
                 else{
                     $imgNameSenior = "Not available";
