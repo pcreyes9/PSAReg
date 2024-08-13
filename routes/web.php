@@ -84,6 +84,12 @@ Route::middleware([
         return response()->download($pathToFile);
     });
 
+    Route::get('/admin/viewMemReg/download/payment/{payment}', function ($payment){
+        // dd($trainee_cert);
+        $pathToFile = public_path('storage/photos/proof of payments/'. $payment);
+        return response()->download($pathToFile);
+    });
+
     Route::get('/admin/dashboard/export-excel', function () {
         return Excel::download(new ExcelExport, 'Registration Annual Convention as of '. Carbon::now()->format('mdy - his') .'.xlsx');
     })->name('exportExcel');
