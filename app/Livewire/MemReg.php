@@ -83,7 +83,10 @@ class MemReg extends Component
         // dd($date->toDateTimeString());
         $err = "";
 
-        if($this->memType == 'LM'){
+        if(Registration::where('psa_id', '=', $this->PSAid)->exists()){
+            session()->flash('message', 'You are already registered. If you have any concern about your registration, please kindly reply to the email we sent to '. Registration::where('psa_id', '=', $this->PSAid)->value('email') .'. Thank you!');
+        }
+        else if($this->memType == 'LM'){
            Registration::create([
                 'psa_id' => $this->PSAid,
                 'last_name' => $this->last_name,
@@ -108,10 +111,6 @@ class MemReg extends Component
             return redirect()->route('emailsend', ['email' => $this->email, 'name' => $this->last_name]);
             // sleep(seconds: 3);
             return $this->cleanvars(); 
-        }
-
-        else if(Registration::where('psa_id', '=', $this->PSAid)->exists()){
-            session()->flash('message', 'You are already registered. If you have any concern about your registration, please kindly reply to the email we sent to '. Registration::where('psa_id', '=', $this->PSAid)->value('email') .'. Thank you!');
         }
         else if( $this->paymentProof == null){
             session()->flash('message', 'Invalid file format of proof of payment. Please try refreshing the page');
