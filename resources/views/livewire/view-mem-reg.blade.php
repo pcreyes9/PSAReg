@@ -85,7 +85,9 @@
                                         @endif
                                     </td>
                                     <td class="px-6 py-4 text-center">
-                                        {{ $regs->created_at }}   
+                                        <a href="{{ url('/admin/viewMemReg/download/payment/' . $regs->proof_payment) }}">
+                                            {{ $regs->created_at }}
+                                        </a>
                                     </td>
                                     @if ($regs->trainee_cert != "Not available")
                                         <td class="px-6 py-4 text-center">
