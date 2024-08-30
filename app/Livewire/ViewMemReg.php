@@ -53,7 +53,7 @@ class ViewMemReg extends Component
         // }
         // $this->name = "tamayo";
         if(strlen($this->name) >= 2){
-            $res = Registration::where('last_name', 'like', $this->name . '%')->paginate(10);
+            $res = Registration::where('last_name', 'like', $this->name . '%')->get();
         }
         else
             $res = [];
