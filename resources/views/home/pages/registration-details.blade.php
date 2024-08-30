@@ -9,11 +9,11 @@
 <section id="main-container" class="pb-4 main-container text-center project-area ">
     <div class="container">
         <div class="row justify-content-center mb-5" data-animation-in="slideInLeft" data-duration-in="1.2">
-            {{-- @if (session('success'))
+            @if (session('success'))
                 <div class="alert alert-success">
                     {{ session('success') }}
                 </div>
-            @endif --}}
+            @endif
             <div class="col-lg-12 mb-3" >
                 <h3 class="into-sub-title" style="color: white">PSA 56<sup style="text-transform: lowercase">th</sup> Annual Convention Registration</h3>
                 <h3 class="section-header" style="color: white">27<sup style="text-transform: lowercase">th</sup> - 29<sup style="text-transform: lowercase">th</sup> <strong >November</strong>  2024 |  Manila Marriott Hotel</h3>
