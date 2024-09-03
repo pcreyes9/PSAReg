@@ -6,6 +6,7 @@
 @section('content')
 {{-- @include('home.banner') --}}
 
+
 <section id="main-container" class="pb-4 main-container text-center project-area ">
     <div class="container">
         <div class="row justify-content-center mb-5" data-animation-in="slideInLeft" data-duration-in="1.2">
@@ -28,6 +29,17 @@
                 <a href="{{route('memReg')}}" class="btn btn-primary mt-3" style="font-size: 20px; background: #d6cb00; color: #000066">Members Registration</a>
                 <a href="{{route('nonMemReg')}}" class="btn btn-dark mt-3 ml-sm-3 " style="font-size: 20px;; ">Non-Members Registration</a>
             </div>
+                <iframe 
+                    class="m-4"
+                    width="560" height="315" 
+                    src="https://www.youtube.com/embed/1QSqEOIxSo0?si=L6XZBYZCmDcp8qIT" 
+                    title="YouTube video player" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+              
+            
             <a class="gallery-popup wrapper" href="images/Annual Convention 2024 Registration Rates.png">
                 <img class="img-fluid w-75 zoom fade-img" style="box-shadow: 3px 3px 5px;" src="images/Annual Convention 2024 Registration Rates.png" alt="">
             </a>

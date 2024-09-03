@@ -21,7 +21,7 @@ class MemReg extends Component
     public $memType;
     public $senior;
     public $contactNumber, $email, $hospitalName, $hospitalAddress, $middle_initial, $paymentProof, $imgName, $imgSenior, $imgCert;
-    public $imgNamePayment, $imgNameSenior = "", $imgNameCert = "";
+    public $imgNamePayment, $imgNameSenior = "", $imgNameCert = "Not available";
     public $regType;
 
     public $err = "";
@@ -118,19 +118,19 @@ class MemReg extends Component
         else if ( $this->PSAid != "" ||  $this->PSAid != null){
             if(strtolower($this->paymentProof->extension()) == "heic" || strtolower($this->paymentProof->extension()) == "jpg" || strtolower($this->paymentProof->extension()) == "png" || strtolower($this->paymentProof->extension()) ==  "jpeg" || strtolower($this->paymentProof->extension()) == "gif"){
                 // IMG CERT
-                if($this->imgCert != null || $this->imgCert != ""){
-                    if(strtolower($this->imgCert->extension()) == "jpg" || strtolower($this->imgCert->extension()) == "png" || strtolower($this->imgCert->extension()) ==  "jpeg" || strtolower($this->imgCert->extension()) == "gif"){
-                        $imgNameCert = $this->PSAid.' '.$this->last_name . " - Trainee Certification " . $date . '.' . $this->imgCert->extension();
-                        $this->imgCert->storeAs('photos/trainee cert', $imgNameCert);
-                    }
-                    else{
-                        $err = "Invalid file format of certificate.";
-                        // session()->flash('message', 'Invalid file format of certificate.');
-                    }
-                }
-                else{
-                    $imgNameCert = "Not available";
-                }
+                // if($this->imgCert != null || $this->imgCert != ""){
+                //     if(strtolower($this->imgCert->extension()) == "jpg" || strtolower($this->imgCert->extension()) == "png" || strtolower($this->imgCert->extension()) ==  "jpeg" || strtolower($this->imgCert->extension()) == "gif"){
+                //         $imgNameCert = $this->PSAid.' '.$this->last_name . " - Trainee Certification " . $date . '.' . $this->imgCert->extension();
+                //         $this->imgCert->storeAs('photos/trainee cert', $imgNameCert);
+                //     }
+                //     else{
+                //         $err = "Invalid file format of certificate.";
+                //         // session()->flash('message', 'Invalid file format of certificate.');
+                //     }
+                // }
+                // else{
+                //     $imgNameCert = "Not available";
+                // }
                 
                 //IMG SENIOR ID
                 if($this->imgSenior != null && $this->imgSenior != "" && $this->senior == "yesSen"){
@@ -175,6 +175,7 @@ class MemReg extends Component
                     $err = "";
                 }
                 else{
+                    
                     Registration::create([
                         'psa_id' => $this->PSAid,
                         'last_name' => $this->last_name,
@@ -190,7 +191,7 @@ class MemReg extends Component
             
                         'senior_citizen' => $imgNameSenior,
                         'proof_payment' => $imgNamePayment,
-                        'trainee_cert' => $imgNameCert
+                        'trainee_cert' => "Not available"
                     ]);
                     
                     session()->flash('message', 'YOU ARE REGISTERED SUCCESSFULLY, DR ' . $this->last_name . '!');
