@@ -42,7 +42,8 @@
             <div style="overflow: hidden; position: relative;">
                 <img class="master-bg" src="images/bg/bgReg.jpg" alt="">
                 <div style="position: relative">
-                    @yield('content')
+                    <h1 class="text-center py-5 my-5" style="color: white">SYSTEM UPDATE ONGOING...</h1>
+                    {{-- @yield('content') --}}
                 </div>
             </div>
 
