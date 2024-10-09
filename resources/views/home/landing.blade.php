@@ -18,7 +18,7 @@
                 of Perioperative Patient Care
               </h5>
               <p class="slider-p" data-animation-in="slideInLeft">
-                Manila Marriott Hotel | October 23 - 25, 2025
+                MARRIOTT GRAND BALLROOM | October 23 - 25, 2025
               </p>
               {{-- <p data-animation-in="slideInLeft" data-duration-in="1.2">
                   <a href="{{route('reg')}}" class="slider btn btn-primary">Register Now!</a>
