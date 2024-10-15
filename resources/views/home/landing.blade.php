@@ -20,64 +20,12 @@
               <p class="slider-p" data-animation-in="slideInLeft">
                 MARRIOTT GRAND BALLROOM | October 23 - 25, 2025
               </p>
-              {{-- <p data-animation-in="slideInLeft" data-duration-in="1.2">
-                  <a href="{{route('reg')}}" class="slider btn btn-primary">Register Now!</a>
-              </p> --}}
             </div>
           </div>
         </div>
       </div>
     </div>
-    {{-- TESTING --}}
-    {{-- <div class="banner-carousel-item" style="background-image:url(images/slider-main/luneta3.jpg)">
-      <div class="text-left slider-content">
-        <div class="container h-100 ">
-          <div class="row align-items-center h-100 ">
-            <div class="col-md-12 mt-20">
-              <h2 class="slide-title-box" data-animation-in="slideInDown">Manila, Philippines</h2>
-              <h3 class="slide-title" data-animation-in="fadeIn">Asean Congress of Anesthesiologists 2025</h3>
-              <h5 class="slide-sub-title" data-animation-in="slideInLeft">Shaping the Future of Perioperative Patient Care</h5>
-              <p data-animation-in="slideInRight">
-                  <a href="{{route('reg')}}" class="border slider btn btn-primary">Register Now!</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> --}}
-
-    {{-- <div class="banner-carousel-item" style="background-image:url(images/slider-main/slider4.jpg)">
-      <div class="text-right slider-content">
-        <div class="container h-100">
-          <div class="row align-items-center h-100">
-            <div class="col-md-12">
-              <h2 class="slide-title" data-animation-in="slideInDown">Meet Our Engineers</h2>
-              <h3 class="slide-sub-title" data-animation-in="fadeIn">We believe sustainability</h3>
-              <p class="slider-description lead" data-animation-in="slideInRight">We will deal with your failure that determines how you achieve success.</p>
-              <div data-animation-in="slideInLeft">
-                  <a href="contact.html" class="slider btn btn-primary" aria-label="contact-with-us">Get Free Quote</a>
-                  <a href="about.html" class="border slider btn btn-primary" aria-label="learn-more-about-us">Learn more</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> --}}
   </div>
-
-  {{-- <section class="call-to-action-box no-padding">
-    <div class="container" style="background-image:url(images/bg/callAction.jpg); background-size: 1260px 883px;">
-      <div class="action-style-box">
-        <div class="row justify-content-center">
-          <div class="text-center  text-md-left">
-            <div class="call-to-action-text">
-              <h1 class="action-title">October 23 - 25, 2025 | Manila Marriott Hotel | Manila | Philippines</h1>
-            </div>
-          </div><!-- Col end -->
-        </div><!-- row end -->
-      </div><!-- Action style box -->
-    </div><!-- Container end -->
-  </section> --}}
 
   <section id="ts-features" class="ts-features">
     <div class="container" >
@@ -134,7 +82,6 @@
               <br>
               President, Philippine Society of Anesthesiologists
             </strong>    
-            
           </p>
         </div><!-- Col end -->
       </div><!-- Row end -->
