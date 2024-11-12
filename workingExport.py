@@ -41,7 +41,7 @@ try:
     
     df.to_csv("EXPORTED_FILE " + datetime.now().strftime("%d-%b-%Y %H_%M_S") + ".csv", index = False)
 
-    notification.notify(title = "Export Status", message = f"Data has been successfuly saved into Excel.\
+    notification.notify(title = "Export Status", message = f"Data has been successfully saved into Excel.\
         \nTotal Rows: {df.shape[0]}\nTotal Columns: {df.shape[1]}", timeout = 10)
 except Exception as e:
     raise Exception (e)
