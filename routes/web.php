@@ -30,13 +30,13 @@ Route::get('/', function () {
 })->name('reg');
 
 
-// Route::get('/mem-registration', function () {
-//     return view('registration.mem-registration');
-// })->name('memReg');
+Route::get('/mem-registration', function () {
+    return view('registration.mem-registration');
+})->name('memReg');
 
-// Route::get('/non-mem-registration', function () {
-//     return view('registration.non-mem-registration');
-// })->name('nonMemReg');
+Route::get('/non-mem-registration', function () {
+    return view('registration.non-mem-registration');
+})->name('nonMemReg');
 
 
 Route::get('/emailsend', function (Request $request){
