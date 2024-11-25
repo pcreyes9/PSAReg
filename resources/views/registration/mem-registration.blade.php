@@ -23,7 +23,7 @@
             @endif
         </div>
         
-        <livewire:mem-reg/>
+        {{-- <livewire:mem-reg/> --}}
     </div>
 </section><!-- Main container end -->
 @endsection

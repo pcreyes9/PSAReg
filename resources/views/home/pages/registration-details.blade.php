@@ -26,7 +26,7 @@
             </div>
             
             <div class="d-grid my-4">
-                {{-- <a href="{{route('memReg')}}" class="btn btn-primary mt-3" style="font-size: 20px; background: #d6cb00; color: #000066">Members Registration</a>
+                {{-- {{-- <a href="{{route('memReg')}}" class="btn btn-primary mt-3" style="font-size: 20px; background: #d6cb00; color: #000066">Members Registration</a> --}}
                 <a href="{{route('nonMemReg')}}" class="btn btn-dark mt-3 ml-sm-3 " style="font-size: 20px;; ">Non-Members Registration</a> --}}
             </div>
                 {{-- <iframe 
