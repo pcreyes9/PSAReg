@@ -20,13 +20,13 @@
                 <h3 class="section-header" style="color: white">27<sup style="text-transform: lowercase">th</sup> - 29<sup style="text-transform: lowercase">th</sup> <strong >November</strong>  2024 |  Manila Marriott Hotel</h3>
                 <br>
                 <br>
-                <h3 class="into-sub-title" style="color: #f2de02">PRE-REGISTRATION HAS ENDED. SEE YOU ON NOVEMBER 27, 2024!</h3>
+                <h3 class="into-sub-title" style="color: #f2de02">PRE-REGISTRATION HAS ENDED</h3>
                 <br>
                 <br>
             </div>
             
             <div class="d-grid my-4">
-                <a href="{{route('memReg')}}" class="btn btn-primary mt-3" style="font-size: 20px; background: #d6cb00; color: #000066">Members Registration</a> 
+                {{-- <a href="{{route('memReg')}}" class="btn btn-primary mt-3" style="font-size: 20px; background: #d6cb00; color: #000066">Members Registration</a>  --}}
                 {{-- <a href="{{route('nonMemReg')}}" class="btn btn-dark mt-3 ml-sm-3 " style="font-size: 20px;; ">Non-Members Registration</a>  --}}
             </div>
                 {{-- <iframe 
